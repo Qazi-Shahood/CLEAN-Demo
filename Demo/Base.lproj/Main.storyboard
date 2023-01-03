@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Posts View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="PostsViewController" id="BYZ-38-t0r" customClass="PostsViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibr-gX-dCw">
+                                <rect key="frame" x="26" y="70" width="362" height="33.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="moe-ms-VKP">
+                                <rect key="frame" x="15" y="119.5" width="384" height="727.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Zme-XX-zNW"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GxV-5D-MPh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0fo-ii-Aj5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0fo-ii-Aj5" firstAttribute="trailing" secondItem="ibr-gX-dCw" secondAttribute="trailing" constant="26" id="0Re-mo-Vgp"/>
+                            <constraint firstItem="ibr-gX-dCw" firstAttribute="top" secondItem="0fo-ii-Aj5" secondAttribute="top" constant="26" id="CtP-bh-LJt"/>
+                            <constraint firstItem="0fo-ii-Aj5" firstAttribute="bottom" secondItem="moe-ms-VKP" secondAttribute="bottom" constant="15" id="FOm-SR-cwk"/>
+                            <constraint firstItem="moe-ms-VKP" firstAttribute="top" secondItem="ibr-gX-dCw" secondAttribute="bottom" constant="16" id="LGb-av-Sco"/>
+                            <constraint firstItem="0fo-ii-Aj5" firstAttribute="trailing" secondItem="moe-ms-VKP" secondAttribute="trailing" constant="15" id="OO5-Jj-6Et"/>
+                            <constraint firstItem="ibr-gX-dCw" firstAttribute="leading" secondItem="0fo-ii-Aj5" secondAttribute="leading" constant="26" id="pQ2-7Z-kPz"/>
+                            <constraint firstItem="moe-ms-VKP" firstAttribute="leading" secondItem="0fo-ii-Aj5" secondAttribute="leading" constant="15" id="tjx-ND-60h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="moe-ms-VKP" id="iFd-yT-m8C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.637681159420293" y="653.57142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
